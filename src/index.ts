@@ -1,4 +1,4 @@
-import { showSideState } from './operations';
+import { recursiveCrossing, showSideState } from './operations';
 import { Persons } from './types';
 
 const startCrossing = () => {
@@ -15,6 +15,7 @@ const startCrossing = () => {
 
   const rightSide: Persons[] = [];
 
-  showSideState(leftSide);
-  showSideState(rightSide);
+  recursiveCrossing(leftSide, rightSide);
 };
+
+startCrossing();

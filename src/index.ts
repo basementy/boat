@@ -1,7 +1,7 @@
-import { recursiveCrossing, showSideState } from './operations';
+import { recursiveCrossing } from './operations';
 import { Persons } from './types';
 
-const startCrossing = () => {
+const startCrossing = async () => {
   const leftSide: Persons[] = [
     Persons.PAI,
     Persons.MAE,
@@ -15,7 +15,10 @@ const startCrossing = () => {
 
   const rightSide: Persons[] = [];
 
-  recursiveCrossing(leftSide, rightSide);
+  console.log('Lado esquerdo: ' + leftSide)
+  console.log('Lado direito: ' + rightSide + '\n');
+
+  await recursiveCrossing(leftSide, rightSide);
 };
 
 startCrossing();
